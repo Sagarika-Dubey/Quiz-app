@@ -8,23 +8,30 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child: SizedBox(
-          width: 22,
-          child: ElevatedButton(
-            child: Text(answerText,
-                style: GoogleFonts.lora(
-                  textStyle:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )),
-            onPressed: selectHandler,
-            style: ButtonStyle(
-              minimumSize: MaterialStateProperty.all(Size(45, 37)),
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-            ),
-          )),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: double.infinity,
+          child: SizedBox(
+              width: 22,
+              child: ElevatedButton(
+                child: Text(answerText,
+                    style: GoogleFonts.lora(
+                      textStyle:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    )),
+                onPressed: selectHandler,
+                style: ButtonStyle(
+                  minimumSize: MaterialStateProperty.all(Size(45, 37)),
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      Color.fromARGB(255, 167, 162, 168)),
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.black),
+                ),
+              )),
+        ),
+      ],
     );
   }
 }
